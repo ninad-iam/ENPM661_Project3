@@ -123,7 +123,7 @@ pip3 install numpy matplotlib
 
 ## Package Structure
 
-
+```
 diff_bot/
 ├── scripts/
 │   ├── map.py
@@ -134,6 +134,8 @@ diff_bot/
 │   └── wheelchair.urdf.xacro
 ├── launch/
 │   └── gazebo.launch.py
+
+
 ```
 
 ---
