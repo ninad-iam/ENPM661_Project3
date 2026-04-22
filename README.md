@@ -188,6 +188,9 @@ This will:
 ## Some other goal nodes to try for A* Planning
 
 * Goal -> (1.0, 1.45)
+* to try this goal make change in nav.py on line no. 482:
+* find this -> self.declare_parameter("base_goal", [1.0, 3.5])
+* change here.
 * The goal value is scaled up to the map by the nav.py itsef.
 
 ## Summary
