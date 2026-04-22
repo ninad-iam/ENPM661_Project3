@@ -13,8 +13,8 @@ install(
 )
 install(
   PROGRAMS
-    scripts/teleop.py
     scripts/nav.py
+    scripts/map.py
   DESTINATION lib/${PROJECT_NAME}
 )
 ament_package()

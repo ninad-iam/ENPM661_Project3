@@ -8,7 +8,7 @@
                 <geometry>
                     <mesh>
                         <uri>model://project3/meshes/map-project3-phase2.STL</uri>
-                        <scale>0.0057 0.0057 0.0057</scale>
+                        <scale>0.004 0.004 0.004</scale>
                     </mesh>
                 </geometry>
             </visual>
@@ -16,7 +16,7 @@
                 <geometry>
                     <mesh>
                         <uri>model://project3/meshes/map-project3-phase2.STL</uri>
-                        <scale>0.0057 0.0057 0.0057</scale>
+                        <scale>0.004 0.004 0.004</scale>
                     </mesh>
                 </geometry>
             </collision>

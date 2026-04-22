@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="wheelchair_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <!-- ==================== Properties ==================== -->
+  <!-- Properties -->
   <xacro:property name="base_width"   value="0.65"/>
   <xacro:property name="base_length"  value="1.05"/>
   <xacro:property name="base_height"  value="0.08"/>
@@ -51,7 +51,7 @@
   <xacro:property name="lidar_radius"  value="0.05"/>
   <xacro:property name="camera_size"   value="0.05"/>
 
-  <!-- ==================== Inertia Macros ==================== -->
+  <!-- Inertia -->
   <xacro:macro name="cylinder_inertia" params="m r h">
     <inertial>
       <mass value="${m}"/>
@@ -76,7 +76,7 @@
     </inertial>
   </xacro:macro>
 
-  <!-- ==================== Wheel Macro ==================== -->
+  <!-- Wheel -->
   <xacro:macro name="wheel" params="name y_sign">
     <link name="${name}_wheel">
       <visual>
@@ -114,7 +114,7 @@
     </gazebo>
   </xacro:macro>
 
-  <!-- ==================== base_footprint ==================== -->
+  <!--    base_footprint    -->
   <link name="base_footprint"/>
 
   <joint name="base_footprint_joint" type="fixed">
@@ -123,7 +123,7 @@
     <origin xyz="0 0 ${wheel_radius}" rpy="0 0 0"/>
   </joint>
 
-  <!-- ==================== base_link (chassis frame) ==================== -->
+  <!--    base_link (chassis frame)    -->
   <!-- base_link is the main chassis/frame of the wheelchair -->
   <link name="base_link">
     <visual>
@@ -148,11 +148,11 @@
     <material>Gazebo/Grey</material>
   </gazebo>
 
-  <!-- ==================== Drive Wheels ==================== -->
+  <!--    Drive Wheels    -->
   <xacro:wheel name="left"  y_sign="1"/>
   <xacro:wheel name="right" y_sign="-1"/>
 
-  <!-- ==================== Front Caster (single) ==================== -->
+  <!--    Front Caster (single)    -->
   <link name="front_caster">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -187,7 +187,7 @@
     <mu2>0.0</mu2>
   </gazebo>
 
-  <!-- ==================== Rear Caster ==================== -->
+  <!--    Rear Caster    -->
   <link name="rear_caster">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -224,7 +224,7 @@
     <kd>100.0</kd>
   </gazebo>
 
-  <!-- ==================== SEAT PAN ==================== -->
+  <!--    SEAT PAN    -->
   <link name="seat_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -255,7 +255,7 @@
     <material>Gazebo/Blue</material>
   </gazebo>
 
-  <!-- ==================== BACKREST ==================== -->
+  <!--    BACKREST    -->
   <link name="backrest_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -286,7 +286,7 @@
     <material>Gazebo/Blue</material>
   </gazebo>
 
-  <!-- ==================== LEFT ARMREST ==================== -->
+  <!--    LEFT ARMREST    -->
   <link name="left_armrest_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -317,7 +317,7 @@
     <material>Gazebo/Grey</material>
   </gazebo>
 
-  <!-- ==================== RIGHT ARMREST ==================== -->
+  <!--    RIGHT ARMREST    -->
   <link name="right_armrest_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -347,7 +347,7 @@
     <material>Gazebo/Grey</material>
   </gazebo>
 
-  <!-- ==================== LEFT FOOTREST ==================== -->
+  <!--    LEFT FOOTREST    -->
   <link name="left_footrest_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -378,7 +378,7 @@
     <material>Gazebo/Grey</material>
   </gazebo>
 
-  <!-- ==================== RIGHT FOOTREST ==================== -->
+  <!--    RIGHT FOOTREST    -->
   <link name="right_footrest_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -408,7 +408,7 @@
     <material>Gazebo/Grey</material>
   </gazebo>
 
-  <!-- ==================== LiDAR Sensor ==================== -->
+  <!--    LiDAR Sensor    -->
   <link name="lidar_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -474,7 +474,7 @@
     </sensor>
   </gazebo>
 
-  <!-- ==================== Camera Sensor ==================== -->
+  <!--    Camera Sensor    -->
   <link name="camera_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -546,7 +546,7 @@
     </sensor>
   </gazebo>
 
-  <!-- ==================== Differential Drive Plugin ==================== -->
+  <!--    Differential Drive Plugin    -->
   <gazebo>
     <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
       <ros>
